@@ -1,0 +1,50 @@
+<h5 class="text-center">Clientes</h5>
+<div>
+    <button type="button" class="btn btn-outline-info btn-sm" routerLink="/crearCliente">
+         Nuevo <i class="fas fa-plus"></i>
+    </button>
+</div>
+<br><br><br><br><br><br><br>
+<div class="container">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Folio</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+                <th>Paquete</th>
+                <th>Sector</th>
+                <th>Estación</th>
+                <th>Estatus</th>
+                <th>Fecha C</th>
+                <th>Id V</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let clientes of clients">
+            <tr>
+                <td>{{clientes.n_contrato}}</td>
+                <td>{{clientes.nombre_completo}}</td>
+                <td>{{clientes.telefono}}</td>
+                <td>{{clientes.direccion}}</td>
+                <td>{{clientes.paquete}}</td>
+                <td>{{clientes.sector}}</td>
+                <td>{{clientes.estacion}}</td>
+                <td>{{clientes.status}}</td>
+                <td>{{clientes.fecha_contratacion | date: 'yyyy-MM-dd'}}</td>
+                <td>{{clientes.id_vendedor}}</td>
+                <td>
+                    <button [routerLink]="['/cliente/editar', clientes.id]" class="btn btn-outline-warning btn-sm">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-outline-danger btn-sm" (click)="deleteCliente(clientes.id)">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

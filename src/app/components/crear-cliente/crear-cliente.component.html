@@ -1,0 +1,83 @@
+<div class="container text-center">
+    <br>
+    <!-- <h2>Registro De Clientes</h2> -->
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">No. Contrato</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.n_contrato" placeholder="No. de contrato" aria-label="First name">
+        </div>
+        <div class="col">
+            <label for="">Nombre Completo</label>
+            <br>
+          <input type="text" class="form-control"  [(ngModel)]="cliente.nombre_completo" placeholder="Nombre completo" aria-label="Last name">
+        </div>
+        <div class="col">
+            <label for="">Teléfono</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.telefono" placeholder="Teléfono" aria-label="First name">
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">Dirección</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.direccion"  placeholder="Dirección" aria-label="Last name">
+        </div>
+        <div class="col">
+            <label for="">Paquete</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.paquete"  placeholder="Paquete" aria-label="First name">
+        </div>
+        <div class="col">
+            <label for="">Sector</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.sector"  placeholder="Sector" aria-label="Last name">
+        </div>
+      </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">Estación</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.estacion"  placeholder="Estación" aria-label="First name">
+        </div>
+        <div class="col">
+            <label for="">Estatus</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.estatus"  placeholder="Estatus" aria-label="Last name">
+        </div>
+        <div class="col">
+            <label for="">Fecha Contratación</label>
+            <br>
+            <input type="date" class="form-control" [(ngModel)]="cliente.fecha_contratacion " aria-label="First name">
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">Id Instalación</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.id_instalacion" placeholder="Id Instalación" aria-label="Last name">
+        </div>
+        <div class="col">
+            <label for="">Id Vendedor</label>
+            <br>
+          <input type="text" class="form-control" [(ngModel)]="cliente.id_vendedor" placeholder="Id Vendedor" aria-label="Last name">
+        </div>
+    </div>
+</div>
+<br>
+<div class="float-right">
+    <button type="button" class="btn btn-outline-info btn-sm" (click)="edit ? actualizarCliente() : guardarCliente()">Guardar</button>
+</div>
