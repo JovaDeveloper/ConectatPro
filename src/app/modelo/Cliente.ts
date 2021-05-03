@@ -8,7 +8,7 @@ export interface Cliente
     paquete ? : string;
     sector ? : string;
     estacion ? : string;
-    estatus ? : string;
+    status ? :  string;
     fecha_contratacion ? : string;
     created_by ? : string;
     created_at ? : string;

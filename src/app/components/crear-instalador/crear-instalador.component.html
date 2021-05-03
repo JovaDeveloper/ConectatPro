@@ -1,0 +1,51 @@
+<button type="button" class="btn btn-outline-info btn-sm" routerLink="/instalador">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">Nombre Completo</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="instalador.nombre_completo" placeholder="Nombre Completo">
+        </div>
+        <div class="col">
+            <label for="">Tipo trabajador</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="instalador.tipo_trabajador"  placeholder="Tipo trabajador">
+        </div>
+        <div class="col">
+            <label for="">Teléfono</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="instalador.telefono" placeholder="Teléfono">
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">Dirección</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="instalador.direccion" placeholder="Dirección">
+        </div>
+        <div class="col">
+            <label for="">Creado por</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="instalador.created_by" placeholder="Dirección">
+        </div>
+        <div class="col">
+        <label for="">Fecha creación</label>
+        <br>
+        <input type="date" class="form-control" [(ngModel)]="instalador.created_at" placeholder="Dirección">
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="float-right">
+    <button type="button" class="btn btn-outline-info btn-sm" (click) = "guardarInstalador()">
+        Guardar
+    </button>
+</div>

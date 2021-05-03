@@ -20,7 +20,7 @@ export class CrearClienteComponent implements OnInit {
     paquete : '',
     sector : '',
     estacion : '',
-    estatus : '',
+    status : '',
     fecha_contratacion : '',
     created_by : '',
     created_at : '',
@@ -42,8 +42,8 @@ export class CrearClienteComponent implements OnInit {
       .subscribe(
         res => 
         {
+          this.cliente = res["data"][0];
           console.log(res);
-          this.cliente = res;
           this.edit = true;
           
         },
@@ -70,6 +70,9 @@ export class CrearClienteComponent implements OnInit {
 
   actualizarCliente()
   {
+    delete this.cliente.fecha_contratacion;
+    delete this.cliente.created_at;
+    delete this.cliente.created_by;
     console.log(this.cliente);
   }
 

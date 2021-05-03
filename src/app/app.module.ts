@@ -11,13 +11,21 @@ import { NavComponent } from './components/nav/nav.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { CrearClienteComponent } from './components/crear-cliente/crear-cliente.component';
 import { ApiService } from './servicio/api.service';
+import { CrearVendedorComponent } from './components/crear-vendedor/crear-vendedor.component';
+import { VendedorComponent } from './components/vendedor/vendedor.component';
+import { InstaladorComponent } from './components/instalador/instalador.component';
+import { CrearInstaladorComponent } from './components/crear-instalador/crear-instalador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     ClienteComponent,
-    CrearClienteComponent
+    CrearClienteComponent,
+    CrearVendedorComponent,
+    VendedorComponent,
+    InstaladorComponent,
+    CrearInstaladorComponent
   ],
   imports: [
     BrowserModule,

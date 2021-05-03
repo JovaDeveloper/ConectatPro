@@ -1,0 +1,38 @@
+<h5 style="text-align: center;">Vendedores</h5>
+<div>
+    <button type="button" class="btn btn-outline-info btn-sm" routerLink="/crearVendedor">
+        Nuevo <i class="fas fa-plus"></i>
+    </button>
+</div>
+<br>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table table-sm">
+    <thead>
+        <tr>
+            <th>Nombre Completo</th>
+            <th>Teléfono</th>
+            <th>Categoria</th>
+            <th>Dirección</th>
+            <th>Tipo vendedor</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let vendedores of data_vendedor">
+        <tr>
+            <td>{{vendedores.nombre_completo}}</td>
+            <td>{{vendedores.telefono}}</td>
+            <td>{{vendedores.categoria}}</td>
+            <td>{{vendedores.direccion}}</td>
+            <td>{{vendedores.tipo_vendedor}}</td>
+            <td>
+                <button [routerLink] = "['/vendedor/editar', vendedores.id]" class="btn btn-outline-warning btn-sm">
+                    <i class="fas fa-edit"></i>
+                </button>
+            </td>
+            <td>
+                <button class="btn btn-outline-danger btn-sm" (click)="deleteVendedor(vendedores.id)">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
