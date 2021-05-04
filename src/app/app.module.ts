@@ -16,6 +16,7 @@ import { VendedorComponent } from './components/vendedor/vendedor.component';
 import { InstaladorComponent } from './components/instalador/instalador.component';
 import { CrearInstaladorComponent } from './components/crear-instalador/crear-instalador.component';
 import { AntenaComponent } from './components/antena/antena.component';
+import { CrearAntenaComponent } from './components/crear-antena/crear-antena.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AntenaComponent } from './components/antena/antena.component';
     VendedorComponent,
     InstaladorComponent,
     CrearInstaladorComponent,
-    AntenaComponent
+    AntenaComponent,
+    CrearAntenaComponent
   ],
   imports: [
     BrowserModule,

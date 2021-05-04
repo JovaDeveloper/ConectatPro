@@ -1,7 +1,7 @@
 export interface Antena
 {
     id ? : string;
-    serial ? : string,
+    serial ? : string;
     mac ? : string;
     status ? : string;
     fecha ? : string;

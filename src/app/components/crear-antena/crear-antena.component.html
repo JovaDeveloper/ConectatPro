@@ -1,0 +1,35 @@
+<button type="button" class="btn btn-outline-info btn-sm" routerLink="/antena">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">Serial</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="antena.serial" placeholder="Serial">
+        </div>
+        <div class="col">
+            <label for="">Mac</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="antena.mac"  placeholder="Mac">
+        </div>
+        <div class="col">
+            <label for="">Estatus</label>
+            <br>
+            <input type="text" class="form-control" [(ngModel)]="antena.status" placeholder="Estatus">
+        </div>
+        <div class="col">
+            <label for="">Fecha</label>
+            <br>
+            <input type="date" class="form-control" [(ngModel)]="antena.fecha" placeholder="Fecha">
+        </div>
+    </div>
+</div>
+<br>
+<div class="float-right">
+    <button type="button" class="btn btn-outline-info btn-sm" (click) = "guardarAntena()">
+        Guardar
+    </button>
+</div>
