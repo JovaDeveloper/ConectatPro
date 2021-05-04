@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Cliente } from '../modelo/Cliente';
 import { Vendedor } from '../modelo/Vendedor'; 
 import { Instalador} from '../modelo/Instalador';
+import { Antena } from '../modelo/Antena';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -87,7 +88,34 @@ export class ApiService {
 
   actualizarInstalador(id : string | number, actualizarInstalador:Instalador) : Observable<Instalador>
   {
-    return this.http.put(`${this.API_URI}/${id}`, actualizarInstalador)
+    return this.http.put(`${this.API_URI}/${id}`, actualizarInstalador);
   }
+
+  // Método Antena
+  obtenerAntenas()
+  {
+    return this.http.get(`${this.API_URI}/antena`);
+  }
+
+  obtenerAntena(id:string)
+  {
+    return this.http.get(`${this.API_URI}/antena/${id}`);
+  }
+
+  agregarAntena(antena:Antena)
+  {
+    return this.http.post(`${this.API_URI}/antena`, antena)
+  }
+
+  eliminarAntena(id:string)
+  {
+    return this.http.delete(`${this.API_URI}/antena/${id}`);
+  }
+
+  actualizarAntena(id:string | number, actualizarAntena:Antena) : Observable<Antena>
+  {
+    return this.http.put(`${this.API_URI}/${id}`, actualizarAntena);
+  }
+
 
 }

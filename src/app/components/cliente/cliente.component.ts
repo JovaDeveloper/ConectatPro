@@ -36,7 +36,7 @@ getClientes()
     },
     err => 
     {
-      console.error(err);
+      console.error(err)
       
     }
   );

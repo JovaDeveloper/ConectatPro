@@ -6,6 +6,7 @@ import { VendedorComponent } from './components/vendedor/vendedor.component';
 import { CrearVendedorComponent } from './components/crear-vendedor/crear-vendedor.component';
 import { InstaladorComponent } from './components/instalador/instalador.component';
 import { CrearInstaladorComponent } from './components/crear-instalador/crear-instalador.component';
+import { AntenaComponent } from './components/antena/antena.component';
 
 const routes: Routes = [
   {
@@ -57,6 +58,11 @@ const routes: Routes = [
   {
     path: 'instalador/editar/:id',
     component: CrearInstaladorComponent
+  },
+
+  {
+    path: 'antena',
+    component: AntenaComponent
   }
 ];
 

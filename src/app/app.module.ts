@@ -15,6 +15,7 @@ import { CrearVendedorComponent } from './components/crear-vendedor/crear-vended
 import { VendedorComponent } from './components/vendedor/vendedor.component';
 import { InstaladorComponent } from './components/instalador/instalador.component';
 import { CrearInstaladorComponent } from './components/crear-instalador/crear-instalador.component';
+import { AntenaComponent } from './components/antena/antena.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CrearInstaladorComponent } from './components/crear-instalador/crear-in
     CrearVendedorComponent,
     VendedorComponent,
     InstaladorComponent,
-    CrearInstaladorComponent
+    CrearInstaladorComponent,
+    AntenaComponent
   ],
   imports: [
     BrowserModule,
