@@ -70,10 +70,20 @@ export class CrearClienteComponent implements OnInit {
 
   actualizarCliente()
   {
-    delete this.cliente.fecha_contratacion;
-    delete this.cliente.created_at;
-    delete this.cliente.created_by;
+    // delete this.cliente.fecha_contratacion;
+    // delete this.cliente.created_at;
+    // delete this.cliente.created_by;
     console.log(this.cliente);
+    this.apiService.actualizarCliente(this.cliente.id, this.cliente).subscribe
+    (
+      res => 
+      {
+        console.log(res);
+        this.router.navigate(['/cliente']);
+      },
+      err => console.log(err)
+      
+    )
   }
 
   
