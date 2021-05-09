@@ -8,6 +8,8 @@ import { InstaladorComponent } from './components/instalador/instalador.componen
 import { CrearInstaladorComponent } from './components/crear-instalador/crear-instalador.component';
 import { AntenaComponent } from './components/antena/antena.component';
 import { CrearAntenaComponent} from './components/crear-antena/crear-antena.component';
+import { RouterComponent } from './components/router/router.component';
+import { CrearRouterComponent } from './components/crear-router/crear-router.component';
 
 const routes: Routes = [
   {
@@ -69,6 +71,26 @@ const routes: Routes = [
   {
     path: 'crearAntena',
     component: CrearAntenaComponent
+  },
+
+  {
+    path: 'antena/editar/:id',
+    component: CrearAntenaComponent
+  },
+
+  {
+    path: 'router',
+    component: RouterComponent
+  },
+
+  {
+    path: 'crearRouter',
+    component: CrearRouterComponent
+  },
+
+  {
+    path: 'router/editar/:id',
+    component: CrearRouterComponent
   }
 ];
 

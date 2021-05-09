@@ -1,0 +1,32 @@
+<button type="button" class="btn btn-outline-info btn-sm" routerLink="/router">
+    <i class="fas fa-arrow-left"></i>
+</button>
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label for="">Serial</label>
+            <input type="text" class="form-control" [(ngModel)]="route.serial" placeholder="Serial">
+        </div>
+        <div class="col">
+            <label for="">Mac</label>
+            <input type="text" class="form-control" [(ngModel)]="route.mac" placeholder="Mac">
+        </div>
+        <div class="col">
+            <label for="">Estatus</label>
+            <input type="text" class="form-control" [(ngModel)]="route.status" placeholder="Estatus">
+        </div>
+        <div class="col">
+            <label for="">Fecha</label>
+            <input type="date" class="form-control" [(ngModel)]="route.fecha">
+        </div>
+    </div>
+    
+</div>
+<br>
+<div class="float-right">
+    <button type="button" class="btn btn-outline-info btn-sm" (click) = "edit ? actualizarRouter() : guardarRouter()">
+        Guardar
+    </button>
+</div>

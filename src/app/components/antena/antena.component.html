@@ -17,17 +17,17 @@
     </thead>
     <tbody *ngFor = "let antena of data_antena">
         <tr>
-            <th>{{antena.serial}}</th>
-            <th>{{antena.mac}}</th>
-            <th>{{antena.status}}</th>
-            <th>
-                <button class="btn btn-outline-warning btn-sm">
+            <td>{{antena.serial}}</td>
+            <td>{{antena.mac}}</td>
+            <td>{{antena.status}}</td>
+            <td>
+                <button [routerLink]="['/antena/editar', antena.id]" class="btn btn-outline-warning btn-sm">
                     <i class="fas fa-edit"></i>
                 </button>
                 <button class="btn btn-outline-danger btn-sm" (click)="deleteAntena(antena.id)">
                     <i class="fas fa-trash"></i>
                 </button>
-            </th>
+            </td>
         </tr>
     </tbody>
 </table>

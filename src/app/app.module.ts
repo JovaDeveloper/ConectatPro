@@ -17,6 +17,8 @@ import { InstaladorComponent } from './components/instalador/instalador.componen
 import { CrearInstaladorComponent } from './components/crear-instalador/crear-instalador.component';
 import { AntenaComponent } from './components/antena/antena.component';
 import { CrearAntenaComponent } from './components/crear-antena/crear-antena.component';
+import { CrearRouterComponent } from './components/crear-router/crear-router.component';
+import { RouterComponent } from './components/router/router.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { CrearAntenaComponent } from './components/crear-antena/crear-antena.com
     InstaladorComponent,
     CrearInstaladorComponent,
     AntenaComponent,
-    CrearAntenaComponent
+    CrearAntenaComponent,
+    CrearRouterComponent,
+    RouterComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { Cliente } from '../modelo/Cliente';
 import { Vendedor } from '../modelo/Vendedor'; 
 import { Instalador} from '../modelo/Instalador';
 import { Antena } from '../modelo/Antena';
+import { Route } from '../modelo/Router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -115,6 +116,32 @@ export class ApiService {
   actualizarAntena(id:string | number, actualizarAntena:Antena) : Observable<Antena>
   {
     return this.http.put(`${this.API_URI}/${id}`, actualizarAntena);
+  }
+
+  // Método para Router
+  obtenerRouters()
+  {
+    return this.http.get(`${this.API_URI}/router`);
+  }
+
+  obtenerRouter(id:string)
+  {
+    return this.http.get(`${this.API_URI}/router/${id}`);
+  }
+
+  agregarRouter(router:Route)
+  {
+    return this.http.post(`${this.API_URI}/router`, router);
+  }
+
+  eliminarRouter(id:string)
+  {
+    return this.http.delete(`${this.API_URI}/router/${id}`);
+  }
+
+  actualizarRouter(id:string | number, actualizarRouter:Route) : Observable<Route>
+  {
+    return this.http.put(`${this.API_URI}/${id}`, actualizarRouter);
   }
 
 

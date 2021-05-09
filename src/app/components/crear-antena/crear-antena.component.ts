@@ -21,11 +21,30 @@ export class CrearAntenaComponent implements OnInit {
     created_at : '',  
     updated_by : '',  
     updated_at  : '' 
-  }
+  };
+
+  edit : boolean = false;
 
   constructor(private apiService:ApiService, private activatedRoute:ActivatedRoute, private router:Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const params = this.activatedRoute.snapshot.params;
+    if(params.id)
+    {
+      this.apiService.obtenerAntena(params.id).subscribe
+      (
+        res => 
+        {
+          this.antena = res["data"][0];
+          console.log(res);
+          this.edit = true;
+        },
+        err => console.error(err)
+      )
+    }
+  }
+
+
 
   guardarAntena()
   {
@@ -41,6 +60,20 @@ export class CrearAntenaComponent implements OnInit {
         this.router.navigate(['/antena']);
       },
       err => console.error(err)
+    )
+  }
+
+  actualizarAntena()
+  {
+    console.log(this.antena);
+    this.apiService.actualizarCliente(this.antena.id, this.antena).subscribe
+    (
+      res =>
+      {
+        console.log(res);
+        this.router.navigate(['/antena']);
+      },
+      err => console.log(err)
     )
   }
 

@@ -32,10 +32,10 @@ export class CrearClienteComponent implements OnInit {
 
   edit : boolean = false;
 
-  constructor(private apiService: ApiService, private router:Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private apiService:ApiService, private router:Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const params =this.activatedRoute.snapshot.params;
+    const params = this.activatedRoute.snapshot.params;
     if(params.id)
     {
       this.apiService.obtenerCliente(params.id)
